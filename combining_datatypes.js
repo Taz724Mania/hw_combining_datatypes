@@ -1,7 +1,7 @@
 const crayonBox = {
     colors: ['green', 'blue', 'purple', 'teal'],
     age: '5 years',
-    smell: 'wax',
+    smell: 'waxy',
 }
 console.log(crayonBox.colors[2])
 
@@ -50,3 +50,37 @@ const apartmentBuilding = [
     }
 ]
 console.log(apartmentBuilding[0].people[0])
+//////////////////////////////////////////////////////////////////////////
+function knit() {
+   return {
+    item: 'scarf',
+    size: '6ft',
+    color: 'red',
+    material: 'wool',
+   }
+}
+const scarf = knit()
+console.log(scarf.color)
+////////////////////////////////////////////////////////////////////////
+const crayonSelector = () => {
+    return {
+        colors: ['green', 'blue', 'purple', 'teal'],
+        age: '5 years',
+        smell: 'waxy',
+    }
+}
+const crayonPick = crayonSelector()
+console.log(crayonPick.colors[2])
+////////////////////////////////////////////////////////////////////////
+const powerButton = () => {
+   const options = () => {
+        console.log('Pick your poison.')
+    }
+    return options
+}
+powerButton()()
+////////////////////////////////////////////////////////////////////////
+
+
+
+
