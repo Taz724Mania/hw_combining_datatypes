@@ -80,6 +80,33 @@ const powerButton = () => {
 }
 powerButton()()
 ////////////////////////////////////////////////////////////////////////
+// Model a Vending Machine 
+
+// a vending machine is an object
+// it has an array of snacks (make 3 snacks)
+// snacks are objects that have a name and a price
+// a vending machine has a function vend that allows user to enter the array position (a number) of the snack and then that snack will be returned
+// Be able to call vendingMachine.vend() with a valid integer to return a snack
+
+const vendingMachine = [ 
+    {snack: 'pretzels', cost: 2},
+    {snack: 'potato chips', cost: 1.5},
+    {snack: 'Payday', cost: 1.75},
+]
+
+vendingMachine.vend = function() {
+const snackIndex = parseInt(prompt('Enter the snack number (0-2):'));
+
+if (snackIndex < 0 || snackIndex > vendingMachine.length - 1) {
+  alert('Invalid snack number!');
+  return;
+}
+
+const selectedSnack = vendingMachine[snackIndex];
+alert(`You selected ${selectedSnack.snack} for ${selectedSnack.cost}.`);
+};
+
+vendingMachine.vend(2);
 
 
 
